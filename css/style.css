@@ -1,0 +1,100 @@
+@font-face {
+  font-family: "AvenirBook";
+  src: url("../fonts/AvenirLTProBook.otf"); }
+@font-face {
+  font-family: "AvenirRoman";
+  src: url("../fonts/AvenirLTProRoman.otf"); }
+@font-face {
+  font-family: "AvenirMedium";
+  src: url("../fonts/AvenirLTProMedium.otf"); }
+@font-face {
+  font-family: "AvenirBlack";
+  src: url("../fonts/AvenirLTProBlack.otf"); }
+body, html {
+  margin: 0px;
+  padding: 0px; }
+
+body * {
+  box-sizing: border-box; }
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1170px;
+  padding-left: 15px;
+  padding-right: 15px; }
+
+/* Top shop bar */
+.top__header {
+  background-color: #1D1F1E; }
+  .top__header .outer__top {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0px; }
+    .top__header .outer__top .left__off > p {
+      margin: 0px;
+      color: #fff;
+      font-size: 16px;
+      font-family: "AvenirMedium", sans-serif;
+      text-transform: uppercase; }
+    .top__header .outer__top .shop__top > a {
+      text-decoration: none;
+      transition: 0.4s ease opacity;
+      color: #fff;
+      font-size: 16px;
+      font-family: "AvenirMedium", sans-serif;
+      text-transform: uppercase; }
+      .top__header .outer__top .shop__top > a:hover {
+        opacity: 0.7; }
+
+header .outer__header {
+  padding: 25px 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+  header .outer__header .logo__header a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.4s ease opacity; }
+    header .outer__header .logo__header a:hover {
+      opacity: 0.7; }
+  header .outer__header .menu__header .menu__block {
+    display: flex;
+    align-items: center; }
+    header .outer__header .menu__header .menu__block .search__wrapper {
+      margin-right: 40px; }
+    header .outer__header .menu__header .menu__block .search__wrapper a, header .outer__header .menu__header .menu__block .shop__wrapper a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      transition: 0.4s ease opacity; }
+      header .outer__header .menu__header .menu__block .search__wrapper a:hover, header .outer__header .menu__header .menu__block .shop__wrapper a:hover {
+        opacity: 0.7; }
+    header .outer__header .menu__header .menu__block ul {
+      display: flex;
+      align-items: center;
+      list-style-type: none;
+      margin-right: 40px; }
+      header .outer__header .menu__header .menu__block ul li {
+        margin-right: 30px; }
+        header .outer__header .menu__header .menu__block ul li a {
+          color: #1D1F1E;
+          text-decoration: none;
+          font-family: "AvenirMedium", sans-serif;
+          transition: 0.4s ease opacity; }
+          header .outer__header .menu__header .menu__block ul li a:hover {
+            opacity: 0.7; }
+        header .outer__header .menu__header .menu__block ul li:last-child {
+          margin-right: 0px; }
+
+@media (max-width: 480px) {
+  .top__header .outer__top {
+    padding: 10px 0px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    .top__header .outer__top .left__off {
+      margin-bottom: 7px; } }
+
+/*# sourceMappingURL=style.css.map */
