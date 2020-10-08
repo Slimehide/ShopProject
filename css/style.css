@@ -1428,11 +1428,131 @@ footer .bottom__footer {
           line-height: 1.5;
           font-family: "AvenirBlack", sans-serif;
           transition: 0.4s ease opacity;
+          display: inline-flex;
           text-decoration: none; }
           .contact__form .outercontact__form .faq__contact .inner__faq--contact .elem__faq--contact > a:hover {
             opacity: 0.7; }
 
+.error__page {
+  padding: 120px 0px; }
+  .error__page .outer__error {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    .error__page .outer__error > .error__image {
+      margin-bottom: 30px; }
+    .error__page .outer__error .error__info > h2 {
+      text-align: center;
+      margin-top: 0px;
+      margin-bottom: 30px;
+      color: #1D1F1E;
+      font-family: "AvenirBlack", sans-serif;
+      font-size: 50px; }
+    .error__page .outer__error .error__info > p {
+      text-align: center;
+      font-size: 30px;
+      font-family: "AvenirMedium", sans-serif;
+      margin: 0px;
+      line-height: 1.5; }
+    .error__page .outer__error .error__info .error__button {
+      margin-top: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center; }
+      .error__page .outer__error .error__info .error__button > a {
+        border: 0px;
+        border-radius: 5px;
+        font-size: 20px;
+        font-family: "AvenirMedium", sans-serif;
+        color: #fff;
+        min-height: 50px;
+        padding: 15px 60px;
+        background-color: #1D1F1E;
+        transition: 0.4s ease opacity;
+        cursor: pointer;
+        transition: 0.4s ease opacity;
+        text-decoration: none; }
+        .error__page .outer__error .error__info .error__button > a:hover {
+          opacity: 0.7; }
+
+.documents__block {
+  padding: 80px 0px; }
+  .documents__block .elem__documents--wrapper.terms__documents > .elem__document {
+    margin-bottom: 50px; }
+    .documents__block .elem__documents--wrapper.terms__documents > .elem__document.head__document {
+      margin-top: 100px; }
+      .documents__block .elem__documents--wrapper.terms__documents > .elem__document.head__document > h4 {
+        margin-bottom: 50px;
+        margin-top: 0px;
+        font-size: 24px;
+        font-family: "AvenirBlack", sans-serif;
+        text-transform: uppercase; }
+    .documents__block .elem__documents--wrapper.terms__documents > .elem__document:last-child {
+      margin-bottom: 0px; }
+  .documents__block .elem__documents--wrapper > h2 {
+    margin-top: 0px;
+    color: #1D1F1E;
+    font-size: 38px;
+    line-height: 1.5;
+    font-family: "AvenirBlack", sans-serif;
+    margin-bottom: 80px; }
+  .documents__block .elem__documents--wrapper > .elem__document {
+    margin-bottom: 60px; }
+    .documents__block .elem__documents--wrapper > .elem__document:last-child {
+      margin-bottom: 0px; }
+    .documents__block .elem__documents--wrapper > .elem__document > h6 {
+      margin-top: 0px;
+      margin-bottom: 20px;
+      font-size: 24px;
+      font-family: "AvenirBlack", sans-serif;
+      color: #1D1F1E; }
+    .documents__block .elem__documents--wrapper > .elem__document > p {
+      margin-top: 0px;
+      margin-bottom: 20px;
+      color: #7D8492;
+      font-size: 18px;
+      font-family: "AvenirBook", sans-serif;
+      line-height: 1.5; }
+      .documents__block .elem__documents--wrapper > .elem__document > p span, .documents__block .elem__documents--wrapper > .elem__document > p a {
+        font-family: "AvenirBlack", sans-serif;
+        color: #1D1F1E; }
+      .documents__block .elem__documents--wrapper > .elem__document > p a {
+        text-decoration: none;
+        transition: 0.4s ease opacity; }
+        .documents__block .elem__documents--wrapper > .elem__document > p a:hover {
+          opacity: 0.7; }
+      .documents__block .elem__documents--wrapper > .elem__document > p:last-child {
+        margin-bottom: 0px; }
+    .documents__block .elem__documents--wrapper > .elem__document > ul {
+      margin-bottom: 20px;
+      padding: 0px;
+      margin-top: 0px; }
+      .documents__block .elem__documents--wrapper > .elem__document > ul li {
+        display: inline-flex;
+        align-items: center;
+        color: #7D8492;
+        font-size: 18px;
+        font-family: "AvenirBook", sans-serif;
+        line-height: 1.5;
+        margin-bottom: 7px; }
+
 @media (max-width: 1200px) {
+  .error__page {
+    padding: 80px 0px; }
+    .error__page .outer__error .error__info > h2 {
+      font-size: 40px;
+      margin-bottom: 20px; }
+    .error__page .outer__error .error__info > p {
+      font-size: 24px;
+      max-width: 940px;
+      margin-left: auto;
+      margin-right: auto; }
+    .error__page .outer__error .error__info .error__button {
+      margin-top: 35px; }
+      .error__page .outer__error .error__info .error__button > a {
+        font-size: 17.3913043478px; }
+
   .contact__form {
     padding: 100px 0px; }
     .contact__form .outercontact__form .form__inner {
@@ -1529,6 +1649,22 @@ footer .bottom__footer {
       .testimonials__block .outer__testimonials .inner__testimonials .elem__testimonials .testimonials__image {
         margin-right: 20px; } }
 @media (max-width: 991px) {
+  .error__page {
+    padding: 50px 0px; }
+    .error__page .outer__error .error__info > h2 {
+      font-size: 32px;
+      margin-bottom: 20px; }
+    .error__page .outer__error .error__info > p {
+      font-size: 21px;
+      line-height: 1.5;
+      max-width: 740px;
+      margin-left: auto;
+      margin-right: auto; }
+    .error__page .outer__error .error__info .error__button {
+      margin-top: 35px; }
+      .error__page .outer__error .error__info .error__button a {
+        font-size: 15.3846153846px; }
+
   .contact__form {
     padding: 70px 0px; }
     .contact__form .outercontact__form {
@@ -1666,6 +1802,26 @@ footer .bottom__footer {
     justify-content: center;
     align-items: center; } }
 @media (max-width: 767px) {
+  .error__page {
+    padding: 35px 0px; }
+    .error__page .outer__error .error__image {
+      margin-bottom: 20px; }
+      .error__page .outer__error .error__image img {
+        max-width: 280px; }
+    .error__page .outer__error .error__info > h2 {
+      font-size: 26px;
+      margin-bottom: 20px; }
+    .error__page .outer__error .error__info > p {
+      font-size: 19px;
+      line-height: 1.5;
+      max-width: 740px;
+      margin-left: auto;
+      margin-right: auto; }
+    .error__page .outer__error .error__info .error__button {
+      margin-top: 35px; }
+      .error__page .outer__error .error__info .error__button a {
+        font-size: 15.3846153846px; }
+
   .contact__form {
     padding: 45px 0px; }
     .contact__form .outercontact__form .faq__contact {
