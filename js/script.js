@@ -9,4 +9,20 @@ $(document).ready(function(){
 			$(this).closest('.elem__faq').find(".content__faq").slideDown(400);
 		}
 	});
+	$(".payment__form .head__payment input").on("change" ,function(e){
+		e.preventDefault();
+		if ($(this).closest(".elem__payment").find(".card__payment").length) {
+			$(this).closest(".elem__payment").find(".card__payment").slideDown(400);
+		} else{
+			$(".card__payment").slideUp(400);
+		}
+	});
+	$(".elem__billing input").on("change" , function(e){
+		e.preventDefault();
+		if ($(this).closest(".elem__billing").find(".content__billing").length) {
+			$(this).closest(".elem__billing").find(".content__billing").slideDown(400);
+		} else{
+			$(".content__billing").slideUp(400);
+		}
+	})
 });

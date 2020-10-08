@@ -81,6 +81,107 @@ body * {
   -webkit-transform: scale(1);
   transform: scale(1); }
 
+/* Base for label styling */
+[type="checkbox"]:not(:checked),
+[type="checkbox"]:checked {
+  position: absolute;
+  left: -9999px; }
+
+[type="checkbox"]:not(:checked) + label,
+[type="checkbox"]:checked + label {
+  position: relative;
+  padding-left: 1.95em;
+  cursor: pointer; }
+
+/* checkbox aspect */
+[type="checkbox"]:not(:checked) + label:before,
+[type="checkbox"]:checked + label:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1.25em;
+  height: 1.25em;
+  border: 2px solid #ccc;
+  background: #fff;
+  border-radius: 4px;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1); }
+
+/* checked mark aspect */
+[type="checkbox"]:not(:checked) + label:after,
+[type="checkbox"]:checked + label:after {
+  content: '\2713\0020';
+  position: absolute;
+  top: .15em;
+  left: .22em;
+  font-size: 1.3em;
+  line-height: 0.8;
+  color: #09ad7e;
+  transition: all .2s;
+  font-family: 'Lucida Sans Unicode', 'Arial Unicode MS', Arial; }
+
+/* checked mark aspect changes */
+[type="checkbox"]:not(:checked) + label:after {
+  opacity: 0;
+  transform: scale(0); }
+
+[type="checkbox"]:checked + label:after {
+  opacity: 1;
+  transform: scale(1); }
+
+/* disabled checkbox */
+[type="checkbox"]:disabled:not(:checked) + label:before,
+[type="checkbox"]:disabled:checked + label:before {
+  box-shadow: none;
+  border-color: #bbb;
+  background-color: #ddd; }
+
+[type="checkbox"]:disabled:checked + label:after {
+  color: #999; }
+
+[type="checkbox"]:disabled + label {
+  color: #aaa; }
+
+/* accessibility */
+[type="checkbox"]:checked:focus + label:before,
+[type="checkbox"]:not(:checked):focus + label:before {
+  border: 2px dotted blue; }
+
+/* hover style just for information */
+label:hover:before {
+  border: 2px solid #4778d9 !important; }
+
+/* Useless styles, just for demo design */
+body {
+  font-family: "Open sans", "Segoe UI", "Segoe WP", Helvetica, Arial, sans-serif;
+  color: #777; }
+
+h1, h2 {
+  margin-bottom: .25em;
+  font-weight: normal;
+  text-align: center; }
+
+h2 {
+  margin: .25em 0 2em;
+  color: #aaa; }
+
+form {
+  width: 7em;
+  margin: 0 auto; }
+
+.txtcenter {
+  margin-top: 4em;
+  font-size: .9em;
+  text-align: center;
+  color: #aaa; }
+
+.copy {
+  margin-top: 2em; }
+
+.copy a {
+  text-decoration: none;
+  color: #4778d9; }
+
 .top__header {
   background-color: #1D1F1E; }
   .top__header .outer__top {
@@ -793,6 +894,242 @@ footer .bottom__footer {
         font-size: 18px;
         font-weight: 500; }
 
+.shipping__form .billing__form {
+  padding-top: 25px;
+  margin-top: 25px;
+  border-top: 1px solid #E3E3E3; }
+  .shipping__form .billing__form .head__billing {
+    margin-bottom: 25px; }
+    .shipping__form .billing__form .head__billing > h2 {
+      margin-top: 0px;
+      margin-bottom: 5px;
+      color: #1D1F1E;
+      font-family: "AvenirMedium", sans-serif;
+      font-size: 18px; }
+    .shipping__form .billing__form .head__billing > p {
+      margin: 0px;
+      font-size: 12px;
+      font-family: "AvenirRoman", sans-serif; }
+  .shipping__form .billing__form .inner__billing {
+    border: 1px solid #E3E3E3;
+    border-bottom: 0px;
+    background-color: #fff;
+    border-radius: 5px; }
+    .shipping__form .billing__form .inner__billing .elem__billing .double__billing {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-column-gap: 20px;
+      margin-bottom: 15px; }
+      .shipping__form .billing__form .inner__billing .elem__billing .double__billing:last-child {
+        margin-bottom: 0px; }
+      .shipping__form .billing__form .inner__billing .elem__billing .double__billing .group__billing {
+        margin-bottom: 0px; }
+    .shipping__form .billing__form .inner__billing .elem__billing .group__billing {
+      margin-bottom: 15px; }
+      .shipping__form .billing__form .inner__billing .elem__billing .group__billing:last-child {
+        margin-bottom: 0px; }
+    .shipping__form .billing__form .inner__billing .elem__billing:last-child {
+      margin-bottom: 0px; }
+    .shipping__form .billing__form .inner__billing .elem__billing .head__billing {
+      border-bottom: 1px solid #E3E3E3;
+      padding: 18px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 0px; }
+      .shipping__form .billing__form .inner__billing .elem__billing .head__billing p {
+        margin: 0px; }
+        .shipping__form .billing__form .inner__billing .elem__billing .head__billing p label {
+          color: #1D1F1E;
+          font-size: 14px;
+          font-family: "AvenirRoman", sans-serif;
+          display: flex;
+          align-items: center; }
+    .shipping__form .billing__form .inner__billing .elem__billing .content__billing {
+      border-bottom: 1px solid #E3E3E3;
+      padding: 18px 20px; }
+      .shipping__form .billing__form .inner__billing .elem__billing .content__billing p {
+        margin-top: 0px;
+        margin-bottom: 5px;
+        color: #525252;
+        font-size: 12px;
+        font-family: "AvenirMedium", sans-serif; }
+      .shipping__form .billing__form .inner__billing .elem__billing .content__billing input {
+        width: 100%;
+        min-height: 50px;
+        padding-left: 20px;
+        padding-right: 20px;
+        font-family: "AvenirMedium", sans-serif;
+        font-size: 14px;
+        border: 1px solid #E3E3E3;
+        border-radius: 5px; }
+        .shipping__form .billing__form .inner__billing .elem__billing .content__billing input::-webkit-input-placeholder {
+          /* Chrome/Opera/Safari */
+          color: #ADADAD; }
+        .shipping__form .billing__form .inner__billing .elem__billing .content__billing input::-moz-placeholder {
+          /* Firefox 19+ */
+          color: #ADADAD; }
+        .shipping__form .billing__form .inner__billing .elem__billing .content__billing input:-ms-input-placeholder {
+          /* IE 10+ */
+          color: #ADADAD; }
+        .shipping__form .billing__form .inner__billing .elem__billing .content__billing input:-moz-placeholder {
+          /* Firefox 18- */
+          color: #ADADAD; }
+      .shipping__form .billing__form .inner__billing .elem__billing .content__billing select {
+        width: 100%;
+        min-height: 50px;
+        padding-left: 20px;
+        padding-right: 20px;
+        font-family: "AvenirMedium", sans-serif;
+        font-size: 14px;
+        border: 1px solid #E3E3E3;
+        border-radius: 5px;
+        background: url("../img/selectarrow.svg");
+        background-size: auto;
+        background-position: 95% center;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        text-indent: 1px;
+        text-overflow: '';
+        background-repeat: no-repeat; }
+        .shipping__form .billing__form .inner__billing .elem__billing .content__billing select::-webkit-input-placeholder {
+          /* Chrome/Opera/Safari */
+          color: #ADADAD; }
+        .shipping__form .billing__form .inner__billing .elem__billing .content__billing select::-moz-placeholder {
+          /* Firefox 19+ */
+          color: #ADADAD; }
+        .shipping__form .billing__form .inner__billing .elem__billing .content__billing select:-ms-input-placeholder {
+          /* IE 10+ */
+          color: #ADADAD; }
+        .shipping__form .billing__form .inner__billing .elem__billing .content__billing select:-moz-placeholder {
+          /* Firefox 18- */
+          color: #ADADAD; }
+.shipping__form .payment__form {
+  padding-top: 25px;
+  margin-top: 25px;
+  border-top: 1px solid #E3E3E3; }
+  .shipping__form .payment__form > .head__payment {
+    margin-bottom: 25px; }
+    .shipping__form .payment__form > .head__payment > h2 {
+      margin-top: 0px;
+      margin-bottom: 5px;
+      color: #1D1F1E;
+      font-family: "AvenirMedium", sans-serif;
+      font-size: 18px; }
+    .shipping__form .payment__form > .head__payment > p {
+      margin: 0px;
+      font-size: 12px;
+      font-family: "AvenirRoman", sans-serif; }
+  .shipping__form .payment__form .inner__payment {
+    border: 1px solid #E3E3E3;
+    border-bottom: 0px;
+    background-color: #fff;
+    border-radius: 5px; }
+    .shipping__form .payment__form .inner__payment .elem__payment:last-child {
+      border-bottom: 0px; }
+    .shipping__form .payment__form .inner__payment .elem__payment .card__payment {
+      border-bottom: 1px solid #E3E3E3;
+      padding: 18px 20px; }
+      .shipping__form .payment__form .inner__payment .elem__payment .card__payment .group__expiration {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 20px;
+        align-items: center; }
+        .shipping__form .payment__form .inner__payment .elem__payment .card__payment .group__expiration p {
+          margin-top: 0px;
+          margin-bottom: 5px;
+          color: #525252;
+          font-size: 12px;
+          font-family: "AvenirMedium", sans-serif; }
+        .shipping__form .payment__form .inner__payment .elem__payment .card__payment .group__expiration input {
+          width: 100%;
+          min-height: 50px;
+          padding-left: 20px;
+          padding-right: 20px;
+          font-family: "AvenirMedium", sans-serif;
+          font-size: 14px;
+          border: 1px solid #E3E3E3;
+          border-radius: 5px; }
+          .shipping__form .payment__form .inner__payment .elem__payment .card__payment .group__expiration input::-webkit-input-placeholder {
+            /* Chrome/Opera/Safari */
+            color: #ADADAD; }
+          .shipping__form .payment__form .inner__payment .elem__payment .card__payment .group__expiration input::-moz-placeholder {
+            /* Firefox 19+ */
+            color: #ADADAD; }
+          .shipping__form .payment__form .inner__payment .elem__payment .card__payment .group__expiration input:-ms-input-placeholder {
+            /* IE 10+ */
+            color: #ADADAD; }
+          .shipping__form .payment__form .inner__payment .elem__payment .card__payment .group__expiration input:-moz-placeholder {
+            /* Firefox 18- */
+            color: #ADADAD; }
+        .shipping__form .payment__form .inner__payment .elem__payment .card__payment .group__expiration .code__group {
+          flex-direction: column;
+          display: flex;
+          align-items: center; }
+          .shipping__form .payment__form .inner__payment .elem__payment .card__payment .group__expiration .code__group > p {
+            text-align: left;
+            width: 100%; }
+          .shipping__form .payment__form .inner__payment .elem__payment .card__payment .group__expiration .code__group .code__group--inner {
+            width: 100%;
+            position: relative;
+            display: flex;
+            align-items: center; }
+          .shipping__form .payment__form .inner__payment .elem__payment .card__payment .group__expiration .code__group span {
+            position: absolute;
+            right: 15px; }
+      .shipping__form .payment__form .inner__payment .elem__payment .card__payment .group__card {
+        margin-bottom: 15px; }
+        .shipping__form .payment__form .inner__payment .elem__payment .card__payment .group__card:last-child {
+          margin-bottom: 0px; }
+        .shipping__form .payment__form .inner__payment .elem__payment .card__payment .group__card p {
+          margin-top: 0px;
+          margin-bottom: 5px;
+          color: #525252;
+          font-size: 12px;
+          font-family: "AvenirMedium", sans-serif; }
+        .shipping__form .payment__form .inner__payment .elem__payment .card__payment .group__card input {
+          width: 100%;
+          min-height: 50px;
+          padding-left: 20px;
+          padding-right: 20px;
+          font-family: "AvenirMedium", sans-serif;
+          font-size: 14px;
+          border: 1px solid #E3E3E3;
+          border-radius: 5px; }
+          .shipping__form .payment__form .inner__payment .elem__payment .card__payment .group__card input::-webkit-input-placeholder {
+            /* Chrome/Opera/Safari */
+            color: #ADADAD; }
+          .shipping__form .payment__form .inner__payment .elem__payment .card__payment .group__card input::-moz-placeholder {
+            /* Firefox 19+ */
+            color: #ADADAD; }
+          .shipping__form .payment__form .inner__payment .elem__payment .card__payment .group__card input:-ms-input-placeholder {
+            /* IE 10+ */
+            color: #ADADAD; }
+          .shipping__form .payment__form .inner__payment .elem__payment .card__payment .group__card input:-moz-placeholder {
+            /* Firefox 18- */
+            color: #ADADAD; }
+        .shipping__form .payment__form .inner__payment .elem__payment .card__payment .group__card .card__number {
+          position: relative;
+          display: flex;
+          align-items: center; }
+          .shipping__form .payment__form .inner__payment .elem__payment .card__payment .group__card .card__number span {
+            position: absolute;
+            right: 15px; }
+    .shipping__form .payment__form .inner__payment .elem__payment .head__payment {
+      border-bottom: 1px solid #E3E3E3;
+      padding: 18px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between; }
+      .shipping__form .payment__form .inner__payment .elem__payment .head__payment p {
+        margin: 0px; }
+        .shipping__form .payment__form .inner__payment .elem__payment .head__payment p label {
+          color: #1D1F1E;
+          font-size: 14px;
+          font-family: "AvenirRoman", sans-serif;
+          display: flex;
+          align-items: center; }
+
 .information__wrapper {
   display: flex;
   justify-content: space-between; }
@@ -856,7 +1193,7 @@ footer .bottom__footer {
           text-decoration: none;
           transition: 0.4s ease opacity; }
           .information__wrapper .filled__block .elem__filled > .filled__button > a:hover {
-            opacity: 0.7; }
+            color: #1D1F1E; }
       .information__wrapper .filled__block .elem__filled > .filled__info > p {
         margin: 0px;
         color: #1D1F1E;
@@ -1478,6 +1815,21 @@ footer .bottom__footer {
 
 .documents__block {
   padding: 80px 0px; }
+  .documents__block .elem__documents--wrapper .document__info > p {
+    font-size: 18px;
+    font-family: "AvenirBook", sans-serif;
+    color: #7D8492;
+    line-height: 1.5;
+    margin: 0px; }
+    .documents__block .elem__documents--wrapper .document__info > p > .weight__link {
+      font-family: "AvenirBlack", sans-serif;
+      text-decoration: none; }
+    .documents__block .elem__documents--wrapper .document__info > p > a {
+      color: #000;
+      text-decoration: underline;
+      transition: 0.4s ease opacity; }
+      .documents__block .elem__documents--wrapper .document__info > p > a:hover {
+        opacity: 0.7; }
   .documents__block .elem__documents--wrapper.terms__documents > .elem__document {
     margin-bottom: 50px; }
     .documents__block .elem__documents--wrapper.terms__documents > .elem__document.head__document {
@@ -1538,6 +1890,12 @@ footer .bottom__footer {
         margin-bottom: 7px; }
 
 @media (max-width: 1200px) {
+  .documents__block {
+    padding: 50px 0px; }
+    .documents__block .elem__documents--wrapper > h2 {
+      font-size: 33.0434782609px;
+      margin-bottom: 50px; }
+
   .error__page {
     padding: 80px 0px; }
     .error__page .outer__error .error__info > h2 {
@@ -1649,6 +2007,24 @@ footer .bottom__footer {
       .testimonials__block .outer__testimonials .inner__testimonials .elem__testimonials .testimonials__image {
         margin-right: 20px; } }
 @media (max-width: 991px) {
+  .documents__block {
+    padding: 50px 0px; }
+    .documents__block .elem__documents--wrapper > .document__info > p {
+      font-size: 15.652173913px; }
+    .documents__block .elem__documents--wrapper > h2 {
+      font-size: 29.2307692308px;
+      margin-bottom: 35px; }
+    .documents__block .elem__documents--wrapper > .elem__document {
+      margin-bottom: 35px; }
+      .documents__block .elem__documents--wrapper > .elem__document > ul > li {
+        font-size: 15.652173913px; }
+      .documents__block .elem__documents--wrapper > .elem__document:last-child {
+        margin-bottom: 0px; }
+      .documents__block .elem__documents--wrapper > .elem__document > h6 {
+        font-size: 21px; }
+      .documents__block .elem__documents--wrapper > .elem__document > p {
+        font-size: 15.652173913px; }
+
   .error__page {
     padding: 50px 0px; }
     .error__page .outer__error .error__info > h2 {
@@ -1940,6 +2316,14 @@ footer .bottom__footer {
     justify-content: center;
     align-items: center; } }
 @media (max-width: 480px) {
+  .documents__block {
+    padding: 35px 0px; }
+    .documents__block .elem__documents--wrapper > .elem__document > h6 {
+      font-size: 19px; }
+    .documents__block .elem__documents--wrapper > h2 {
+      font-size: 25.3333333333px;
+      margin-bottom: 35px; }
+
   .contact__form {
     padding: 45px 0px; }
     .contact__form .outercontact__form .form__inner > h2 {

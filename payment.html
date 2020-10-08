@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;700&display=swap" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/f982e94d70.js" crossorigin="anonymous"></script>
+</head>
+<body>
+	<div class="information__wrapper">
+		<div class="left__information">
+			<div class="information__wrapper">
+				<div class="logo__information">
+					<a href="#"><img src="img/hydrogenlogo.svg" alt="hydrologo"></a>
+				</div>
+				<div class="information__breadcrumbs">
+					<ul>
+						<li class="active__cart"><a href="#">Home</a></li>
+						<li class="active__cart"><i class="fas fa-chevron-right"></i></li>
+						<li class="active__cart"><a href="#">Cart</a></li>
+						<li class="active__cart"><i class="fas fa-chevron-right"></i></li>
+						<li class="active__cart"><a href="#">Information</a></li>
+						<li class="active__cart"><i class="fas fa-chevron-right"></i></li>
+						<li class="active__cart"><a href="#">Shipping</a></li>
+						<li class="active__cart"><i class="fas fa-chevron-right"></i></li>
+						<li class="active__cart">Payment</li>
+					</ul>
+				</div>
+				<form action="" class="shipping__form">
+					<div class="filled__block">
+						<div class="elem__filled">
+							<div class="filled__title">
+								<p>Contact</p>
+							</div>
+							<div class="filled__info">
+								<p>email@email.com</p>
+							</div>
+							<div class="filled__button">
+								<a href="#">Change</a>
+							</div>
+						</div>
+						<div class="elem__filled">
+							<div class="filled__title">
+								<p>Ship to</p>
+							</div>
+							<div class="filled__info">
+								<p>51 Guild Street, London, EC2M 7WT</p>
+							</div>
+							<div class="filled__button">
+								<a href="#">Change</a>
+							</div>
+						</div>
+						<div class="elem__filled">
+							<div class="filled__title">
+								<p>Method</p>
+							</div>
+							<div class="filled__info">
+								<p>Free</p>
+							</div>
+							<div class="filled__button">
+								<a href="#">Change</a>
+							</div>
+						</div>
+					</div>
+					<div class="payment__form">
+						<div class="head__payment">
+							<h2>Payment</h2>
+							<p>All transactions are secure and encrypted.</p>
+						</div>
+						<div class="inner__payment">
+							<div class="elem__payment">
+								<div class="head__payment">
+									<p>
+									    <input type="radio" id="pay1" name="radio-group1" checked="checked">
+									    <label for="pay1">Credit Card</label>
+								    </p>
+								    <div class="credit__group">
+								    	<img src="img/credit1.svg" alt="credit">
+								    	<img src="img/credit2.svg" alt="credit">
+								    	<img src="img/credit3.svg" alt="credit">
+								    	<img src="img/credit4.svg" alt="credit">
+								    </div>
+								</div>
+								<div class="card__payment">
+									<div class="group__card">
+										<p>Card Number</p>
+										<div class="card__number">
+											<span><img src="img/lockedicon.svg" alt="locked"></span>
+											<input type="text" placeholder="0000 - 0000 - 0000 - 0000">
+										</div>
+									</div>
+									<div class="group__card">
+										<p>Name on Card</p>
+										<input type="text" placeholder="Name on Card">
+									</div>
+									<div class="group__expiration">
+										<div class="expiration__group">
+											<p>Expiration Date (MM / YY)</p>
+											<input type="text" placeholder="Expiration Date (MM / YY)">
+										</div>
+										<div class="code__group">
+											<p>Security Code</p>
+											<div class="code__group--inner">
+												<span><img src="img/lockedicon.svg" alt="locked"></span>
+												<input type="text" placeholder="Security Code">
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="elem__payment">
+								<div class="head__payment">
+									<p>
+									    <input type="radio" id="pay2" name="radio-group1">
+									    <label for="pay2"><img src="img/method1.svg" alt="method"></label>
+								    </p>
+								</div>
+							</div>
+							<div class="elem__payment">
+								<div class="head__payment">
+									<p>
+									    <input type="radio" id="pay3" name="radio-group1">
+									    <label for="pay3"><img src="img/method2.svg" alt="method"></label>
+								    </p>
+								</div>
+							</div>
+							<div class="elem__payment">
+								<div class="head__payment">
+									<p>
+									    <input type="radio" id="pay4" name="radio-group1">
+									    <label for="pay4"><img src="img/method3.svg" alt="method"></label>
+								    </p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="billing__form">
+						<div class="head__billing">
+							<h2>Billing Address</h2>
+							<p>Select the address that matches your card or payment method.</p>
+						</div>
+						<div class="inner__billing">
+							<div class="elem__billing">
+								<div class="head__billing">
+									<p>
+									    <input type="radio" id="billing1" name="radio-group2" checked="">
+									    <label for="billing1">Same as shipping address</label>
+								    </p>
+								</div>
+							</div>
+
+							<div class="elem__billing">
+								<div class="head__billing">
+									<p>
+									    <input type="radio" id="billing2" name="radio-group2">
+									    <label for="billing2">Usa a different billing address</label>
+								    </p>
+								</div>
+								<div class="content__billing" style="display:none;">
+									<div class="double__billing">
+										<div class="group__billing">
+											<p>First Name</p>
+											<input type="text" placeholder="First Name">
+										</div>
+										<div class="group__billing">
+											<p>Last Name</p>
+											<input type="text" placeholder="Last Name">
+										</div>
+									</div>
+									<div class="group__billing">
+										<p>Company (optional)</p>
+										<input type="text" placeholder="Company (optional)">
+									</div>
+									<div class="group__billing">
+										<p>Address</p>
+										<input type="text" placeholder="Address">
+									</div>
+									<div class="group__billing">
+										<p>Apartment, suite, etc. (optional)</p>
+										<input type="text" placeholder="Apartment, suite, etc. (optional)">
+									</div>
+									<div class="group__billing">
+										<p>City</p>
+										<input type="text" placeholder="City">
+									</div>
+									<div class="double__billing">
+										<div class="group__billing">
+											<p>Country / Region</p>
+											<select name="" id="">
+												<option value="">UK</option>
+												<option value="">QW</option>
+												<option value="">WE</option>
+												<option value="">ER</option>
+												<option value="">RT</option>
+											</select>
+										</div>
+										<div class="group__billing">
+											<p>Postcode</p>
+											<input type="text" placeholder="Postcode">
+										</div>
+									</div>
+									<div class="group__billing">
+										<p>Phone</p>
+										<input type="text" placeholder="Phone">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="group__buttons">
+						<a href="#" class="return__button"><span><i class="fas fa-chevron-left"></i></span> Return to Shipping</a>
+						<a href="#" class="continue__button">Pay Now</a>
+					</div>
+					<div class="bottom__links">
+						<ul>
+							<li><a href="#">Refund Policy</a></li>
+							<li><a href="#">Privacy Policy</a></li>
+							<li><a href="#">Terms of Service</a></li>
+						</ul>
+					</div>
+				</form>
+			</div>
+		</div>
+		<div class="right__information">
+			<div class="product__information">
+				<div class="top__product--information">
+					<div class="product__info--head">
+						<div class="product__info--image">
+							<div class="product__counter"><span>1</span></div>
+							<img src="img/buyproduct.png" alt="buyproduct">
+						</div>
+						<div class="product__info--text">
+							<span>Lorem Ipsum</span>
+							<p>Product Details</p>
+						</div>
+					</div>
+					<div class="product__price">
+						<span>$30.00</span>
+					</div>
+				</div>
+				<div class="discount__wrapper">
+					<p>Gift card or discount code</p>
+					<div class="discount__group">
+						<input type="text" placeholder="Gift card of discount code">
+						<input type="submit" value="Apply">
+					</div>
+				</div>
+				<div class="subtotal__information">
+					<div class="subtotal__info--top">
+                        <span>Subtotal</span>
+                        <span>$30.00</span>
+					</div>
+					<div class="subtotal__info--bottom">
+						<span>Shipping</span>
+						<span>Free</span>
+					</div>
+				</div>
+				<div class="total__information">
+					<div class="total__left">
+						<p>Total</p>
+						<span>Including $2.22 in taxes</span>
+					</div>
+					<div class="total__right">
+						<span>$30.00</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script
+  src="https://code.jquery.com/jquery-3.5.1.js"
+  integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+  crossorigin="anonymous"></script>
+	<script src="js/script.js"></script>
+</body>
+</html>
