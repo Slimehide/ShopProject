@@ -1202,23 +1202,22 @@ footer .bottom__footer {
     width: 50%;
     padding: 70px 80px; }
 
-.questions__block {
+.header__block {
   padding: 150px 0px;
-  background: #F4F4F4; }
-  .questions__block .outer__questions {
+  background-color: #F4F5F6; }
+  .header__block .outer__header--block {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     text-align: center; }
-    .questions__block .outer__questions > h2 {
+    .header__block .outer__header--block > h2 {
       margin-top: 0px;
       margin-bottom: 25px;
-      text-transform: uppercase;
       color: #1D1F1E;
       font-family: "AvenirBlack", sans-serif;
       font-size: 38px; }
-    .questions__block .outer__questions > p {
+    .header__block .outer__header--block > p {
       color: #7D8492;
       margin: 0px;
       max-width: 1100px;
@@ -1232,16 +1231,26 @@ footer .bottom__footer {
   padding: 80px 0px; }
   .FAQ__main .outer__faq .elem__faq {
     border: 1px solid #C9C9C9;
-    border-bottom: 0px;
-    padding-left: 40px;
-    padding-right: 40px; }
+    border-bottom: 0px; }
     .FAQ__main .outer__faq .elem__faq:last-child {
       border-bottom: 1px solid #C9C9C9; }
+    .FAQ__main .outer__faq .elem__faq .content__faq > p {
+      margin: 0px;
+      font-family: "AvenirBook", sans-serif;
+      font-size: 18px;
+      color: #434343;
+      line-height: 1.5; }
     .FAQ__main .outer__faq .elem__faq .head__faq {
-      padding: 35px 0px;
+      padding: 35px 40px;
       position: relative;
       display: flex;
+      cursor: pointer;
+      transition: 0.4s ease opacity;
       align-items: center; }
+      .FAQ__main .outer__faq .elem__faq .head__faq.active__faq span {
+        transform: rotate(180deg); }
+      .FAQ__main .outer__faq .elem__faq .head__faq:hover {
+        opacity: 0.7; }
       .FAQ__main .outer__faq .elem__faq .head__faq > p {
         margin: 0px;
         color: #1D1F1E;
@@ -1250,12 +1259,212 @@ footer .bottom__footer {
         padding-right: 35px;
         width: 100%; }
       .FAQ__main .outer__faq .elem__faq .head__faq > span {
+        transition: .4s ease all;
         position: absolute;
-        right: 0px; }
+        right: 40px; }
     .FAQ__main .outer__faq .elem__faq .content__faq {
-      display: none; }
+      display: none;
+      padding-left: 40px;
+      padding-right: 40px;
+      padding-bottom: 35px; }
+
+.contact__us--block {
+  background-color: #F4F5F6;
+  padding: 150px 0px; }
+  .contact__us--block .outer__contact {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; }
+    .contact__us--block .outer__contact .contact__info {
+      margin-right: 50px; }
+      .contact__us--block .outer__contact .contact__info > h2 {
+        color: #1D1F1E;
+        font-size: 38px;
+        font-family: "AvenirBlack", sans-serif;
+        margin: 0px;
+        text-align: center; }
+    .contact__us--block .outer__contact .contact__button > a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 8px;
+      padding: 18px 60px;
+      background-color: #1D1F1E;
+      font-family: "Manrope", sans-serif;
+      color: #fff;
+      text-decoration: none;
+      transition: 0.4s ease opacity;
+      text-transform: uppercase;
+      font-weight: bold; }
+      .contact__us--block .outer__contact .contact__button > a img {
+        display: inline-flex;
+        margin-right: 20px; }
+      .contact__us--block .outer__contact .contact__button > a:hover {
+        opacity: 0.7; }
+
+.contact__form {
+  padding: 150px 0px; }
+  .contact__form .outercontact__form {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between; }
+    .contact__form .outercontact__form .form__inner {
+      width: 100%;
+      max-width: 600px;
+      margin-right: 50px; }
+      .contact__form .outercontact__form .form__inner > h2 {
+        margin-top: 0px;
+        margin-bottom: 80px;
+        color: #1D1F1E;
+        font-family: "AvenirBlack", sans-serif;
+        font-size: 38px; }
+      .contact__form .outercontact__form .form__inner form > .group__contact--submit > input[type="submit"] {
+        border: 0px;
+        border-radius: 5px;
+        font-size: 14px;
+        font-family: "AvenirMedium", sans-serif;
+        color: #fff;
+        min-height: 50px;
+        padding: 15px 40px;
+        background-color: #1D1F1E;
+        transition: 0.4s ease opacity;
+        cursor: pointer; }
+        .contact__form .outercontact__form .form__inner form > .group__contact--submit > input[type="submit"]:hover {
+          opacity: 0.7; }
+      .contact__form .outercontact__form .form__inner form > .group__contact {
+        margin-bottom: 25px; }
+        .contact__form .outercontact__form .form__inner form > .group__contact:last-child {
+          margin-bottom: 0px; }
+        .contact__form .outercontact__form .form__inner form > .group__contact > p {
+          margin-top: 0px;
+          margin-bottom: 5px;
+          color: #525252;
+          font-size: 12px;
+          font-family: "AvenirMedium", sans-serif; }
+        .contact__form .outercontact__form .form__inner form > .group__contact > textarea {
+          width: 100%;
+          height: 250px;
+          font-size: 16px;
+          padding: 15px 20px;
+          border: 1px solid #E3E3E3;
+          border-radius: 5px;
+          font-family: "AvenirMedium", sans-serif;
+          resize: none; }
+          .contact__form .outercontact__form .form__inner form > .group__contact > textarea::-webkit-input-placeholder {
+            /* Chrome/Opera/Safari */
+            color: #ADADAD; }
+          .contact__form .outercontact__form .form__inner form > .group__contact > textarea::-moz-placeholder {
+            /* Firefox 19+ */
+            color: #ADADAD; }
+          .contact__form .outercontact__form .form__inner form > .group__contact > textarea:-ms-input-placeholder {
+            /* IE 10+ */
+            color: #ADADAD; }
+          .contact__form .outercontact__form .form__inner form > .group__contact > textarea:-moz-placeholder {
+            /* Firefox 18- */
+            color: #ADADAD; }
+        .contact__form .outercontact__form .form__inner form > .group__contact > select {
+          width: 100%;
+          min-height: 50px;
+          padding-left: 20px;
+          padding-right: 20px;
+          font-family: "AvenirMedium", sans-serif;
+          font-size: 14px;
+          border: 1px solid #E3E3E3;
+          border-radius: 5px;
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          text-indent: 1px;
+          text-overflow: '';
+          background: url("../img/selectarrow.svg");
+          background-repeat: no-repeat;
+          background-size: auto;
+          background-position: 97% center;
+          background-color: #fff; }
+        .contact__form .outercontact__form .form__inner form > .group__contact > input {
+          width: 100%;
+          min-height: 50px;
+          padding-left: 20px;
+          padding-right: 20px;
+          font-family: "AvenirMedium", sans-serif;
+          font-size: 16px;
+          border: 1px solid #E3E3E3;
+          border-radius: 5px; }
+          .contact__form .outercontact__form .form__inner form > .group__contact > input::-webkit-input-placeholder {
+            /* Chrome/Opera/Safari */
+            color: #ADADAD; }
+          .contact__form .outercontact__form .form__inner form > .group__contact > input::-moz-placeholder {
+            /* Firefox 19+ */
+            color: #ADADAD; }
+          .contact__form .outercontact__form .form__inner form > .group__contact > input:-ms-input-placeholder {
+            /* IE 10+ */
+            color: #ADADAD; }
+          .contact__form .outercontact__form .form__inner form > .group__contact > input:-moz-placeholder {
+            /* Firefox 18- */
+            color: #ADADAD; }
+    .contact__form .outercontact__form .faq__contact {
+      max-width: 330px; }
+      .contact__form .outercontact__form .faq__contact > h2 {
+        margin-top: 0px;
+        margin-bottom: 80px;
+        color: #1D1F1E;
+        font-family: "AvenirBlack", sans-serif;
+        font-size: 38px; }
+      .contact__form .outercontact__form .faq__contact .more__faq {
+        margin-top: 50px; }
+        .contact__form .outercontact__form .faq__contact .more__faq > a {
+          font-size: 20px;
+          transition: 0.4s ease opacity;
+          color: #1D1F1E;
+          font-family: "AvenirMedium", sans-serif; }
+          .contact__form .outercontact__form .faq__contact .more__faq > a:hover {
+            opacity: 0.7; }
+      .contact__form .outercontact__form .faq__contact .inner__faq--contact .elem__faq--contact {
+        margin-bottom: 50px; }
+        .contact__form .outercontact__form .faq__contact .inner__faq--contact .elem__faq--contact:last-child {
+          margin-bottom: 0px; }
+        .contact__form .outercontact__form .faq__contact .inner__faq--contact .elem__faq--contact > a {
+          color: #1D1F1E;
+          font-size: 25px;
+          line-height: 1.5;
+          font-family: "AvenirBlack", sans-serif;
+          transition: 0.4s ease opacity;
+          text-decoration: none; }
+          .contact__form .outercontact__form .faq__contact .inner__faq--contact .elem__faq--contact > a:hover {
+            opacity: 0.7; }
 
 @media (max-width: 1200px) {
+  .contact__form {
+    padding: 100px 0px; }
+    .contact__form .outercontact__form .form__inner {
+      max-width: 550px; }
+    .contact__form .outercontact__form .faq__contact > h2 {
+      margin-bottom: 50px;
+      font-size: 33.0434782609px; }
+    .contact__form .outercontact__form .faq__contact .inner__faq--contact .elem__faq--contact {
+      margin-bottom: 35px; }
+      .contact__form .outercontact__form .faq__contact .inner__faq--contact .elem__faq--contact:last-child {
+        margin-bottom: 0px; }
+      .contact__form .outercontact__form .faq__contact .inner__faq--contact .elem__faq--contact a {
+        font-size: 22px; }
+    .contact__form .outercontact__form .form__inner > h2 {
+      margin-bottom: 50px;
+      font-size: 33.0434782609px; }
+
+  .contact__us--block {
+    padding: 100px 0px; }
+    .contact__us--block .outer__contact .contact__info > h2 {
+      font-size: 33.0434782609px; }
+
+  .FAQ__main {
+    padding: 50px 0px; }
+    .FAQ__main .outer__faq .elem__faq .head__faq > p {
+      font-size: 22px; }
+
+  .header__block {
+    padding: 110px 0px; }
+    .header__block .outer__header--block > h2 {
+      font-size: 33.0434782609px; }
+
   .cart__block {
     padding: 70px 0px; }
     .cart__block .outer__cart .header__cart {
@@ -1320,6 +1529,55 @@ footer .bottom__footer {
       .testimonials__block .outer__testimonials .inner__testimonials .elem__testimonials .testimonials__image {
         margin-right: 20px; } }
 @media (max-width: 991px) {
+  .contact__form {
+    padding: 70px 0px; }
+    .contact__form .outercontact__form {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; }
+      .contact__form .outercontact__form .form__inner {
+        margin-right: 0px; }
+        .contact__form .outercontact__form .form__inner form .group__contact--submit {
+          display: flex;
+          justify-content: center;
+          align-items: center; }
+        .contact__form .outercontact__form .form__inner > h2 {
+          text-align: center;
+          font-size: 29.2307692308px;
+          margin-bottom: 35px; }
+      .contact__form .outercontact__form .faq__contact {
+        max-width: 550px;
+        width: 100%;
+        margin-top: 80px;
+        text-align: center; }
+        .contact__form .outercontact__form .faq__contact > h2 {
+          margin-bottom: 35px;
+          font-size: 29.2307692308px; }
+
+  .contact__us--block {
+    padding: 70px 0px; }
+    .contact__us--block .outer__contact {
+      display: flex;
+      flex-direction: column; }
+      .contact__us--block .outer__contact .contact__info {
+        margin-right: 0px;
+        margin-bottom: 25px; }
+        .contact__us--block .outer__contact .contact__info > h2 {
+          font-size: 29.2307692308px; }
+
+  .FAQ__main .outer__faq .elem__faq .head__faq > p {
+    font-size: 20px; }
+  .FAQ__main .outer__faq .elem__faq .content__faq > p {
+    font-size: 15.652173913px; }
+
+  .header__block {
+    padding: 70px 0px; }
+    .header__block .outer__header--block > h2 {
+      font-size: 29.2307692308px; }
+    .header__block .outer__header--block > p {
+      font-size: 15.652173913px; }
+
   .cart__block {
     padding: 50px 0px; }
     .cart__block .outer__cart .header__cart > h2 {
@@ -1408,6 +1666,38 @@ footer .bottom__footer {
     justify-content: center;
     align-items: center; } }
 @media (max-width: 767px) {
+  .contact__form {
+    padding: 45px 0px; }
+    .contact__form .outercontact__form .faq__contact {
+      margin-top: 50px; }
+      .contact__form .outercontact__form .faq__contact > .more__faq {
+        margin-top: 30px; }
+        .contact__form .outercontact__form .faq__contact > .more__faq a {
+          font-size: 17.3913043478px; }
+      .contact__form .outercontact__form .faq__contact > .inner__faq--contact > .elem__faq--contact {
+        margin-bottom: 25px; }
+        .contact__form .outercontact__form .faq__contact > .inner__faq--contact > .elem__faq--contact a {
+          font-size: 19px; }
+        .contact__form .outercontact__form .faq__contact > .inner__faq--contact > .elem__faq--contact:last-child {
+          margin-bottom: 0px; }
+
+  .FAQ__main {
+    padding: 35px 0px; }
+    .FAQ__main .outer__faq .elem__faq .head__faq {
+      padding: 25px 20px; }
+      .FAQ__main .outer__faq .elem__faq .head__faq > span {
+        right: 20px; }
+      .FAQ__main .outer__faq .elem__faq .head__faq > p {
+        font-size: 20px; }
+    .FAQ__main .outer__faq .elem__faq .content__faq {
+      padding-left: 20px;
+      padding-right: 20px; }
+      .FAQ__main .outer__faq .elem__faq .content__faq > p {
+        font-size: 15.652173913px; }
+
+  .header__block {
+    padding: 50px 0px; }
+
   .cart__block {
     padding: 35px 0px; }
     .cart__block .outer__cart .main__cart table tr > td {
@@ -1494,6 +1784,42 @@ footer .bottom__footer {
     justify-content: center;
     align-items: center; } }
 @media (max-width: 480px) {
+  .contact__form {
+    padding: 45px 0px; }
+    .contact__form .outercontact__form .form__inner > h2 {
+      margin-bottom: 25px;
+      font-size: 25.3333333333px; }
+    .contact__form .outercontact__form .faq__contact > h2 {
+      font-size: 25.3333333333px;
+      margin-bottom: 25px; }
+
+  .contact__us--block {
+    padding: 45px 0px; }
+    .contact__us--block .outer__contact .contact__info > h2 {
+      font-size: 25.3333333333px; }
+
+  .FAQ__main .outer__faq .elem__faq .head__faq {
+    padding: 25px 20px; }
+    .FAQ__main .outer__faq .elem__faq .head__faq > span {
+      right: 20px; }
+    .FAQ__main .outer__faq .elem__faq .head__faq > p {
+      font-size: 18px;
+      padding-right: 40px; }
+  .FAQ__main .outer__faq .elem__faq .content__faq {
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px; }
+    .FAQ__main .outer__faq .elem__faq .content__faq > p {
+      font-size: 15.652173913px; }
+
+  .header__block {
+    padding: 35px 0px; }
+    .header__block .outer__header--block > h2 {
+      font-size: 25.3333333333px;
+      margin-bottom: 15px; }
+    .header__block .outer__header--block > p {
+      font-size: 15.652173913px; }
+
   .cart__block .outer__cart .header__cart > h2 {
     font-size: 25.3333333333px; }
   .cart__block .outer__cart .subtotal__block {
